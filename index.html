@@ -445,9 +445,10 @@
         <div class="mobile-go">
           <a href="https://re.bluepoch.com/home/"><img src="https://re.bluepoch.com/img/mobile/go.png" alt=""></a>
         </div>
-        <div class="mobile-yu">
+        <!-- BUG： 应该是干扰项 -->
+        <!-- <div class="mobile-yu">
           <img src="https://re.bluepoch.com/img/mobile/yu.png" alt="" onclick="showYu()">
-        </div>
+        </div> -->
         <div class="mobile-down">
           <a href="" target="_blank" id="mobileD"><img src="https://re.bluepoch.com/img/mobile/d1.png" alt="" data-type="mobile" onclick="uploadShuShu()"></a>
           <a href="https://www.taptap.cn/app/221062?utm_medium=rep&utm_source=rep_mfi0dchkjo2" > <img src="https://re.bluepoch.com/img/mobile/taptap.png" alt=""></a>   
@@ -461,9 +462,10 @@
       </div>
       <div class="m3">
          <img src="https://re.bluepoch.com/img/mobile/03.png" alt="">
-         <div class="mobile-huo" onclick="changeHuoM()">
+         <div class="mobile-huo" onclick="zhenshiShowErweima()">
             <img src="https://re.bluepoch.com/img/mobile/huo.png" alt="" srcset="">
-            <img src="" alt="" srcset="" id="huoImgM"  class="huoImgM">
+            <img id="kuaishouERWEIMA" src="https://article.biliimg.com/bfs/article/6781037305aef38d077789025f2f1071a8af7c77.png" alt="快手二维码，这里好像是真实出代码的" srcset=""   class="myselef-er-wei-ma">
+            <img src="https://article.biliimg.com/bfs/article/6781037305aef38d077789025f2f1071a8af7c77.png" alt="永远隐藏的快手二维码，这里好像是真实出代码的" srcset="" id="huoImgM"  class="huoImgM yongyuanyincang">
          </div>
       </div>
       <div class="m4">
@@ -642,6 +644,18 @@
       
 </script>
 <script>
-   
+  let showImg = false;
+
+  function zhenshiShowErweima() {
+    const kuaishouERWEIMADOM = document.getElementById('kuaishouERWEIMA');
+    if (showImg) {
+      // 如果当前是展示图片，则隐藏
+      kuaishouERWEIMADOM.style.display = 'none';
+    }  else  {
+      // 如果当前是隐藏图片，则展示
+      kuaishouERWEIMADOM.style.display = 'block';
+    }
+    showImg = !showImg;
+  }
 </script>
 </html>
