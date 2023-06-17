@@ -489,7 +489,7 @@
 
                 </div>
             </ul>
-            <button type="button" class="button" @click="post">提交</button>
+            <button type="button" class="button aaaaa" onclick="showDialog()">提交</button>
         </form>
     </div>
     <div class="pic">
@@ -510,18 +510,18 @@
         <div class="centerIt"  onclick="hideDialog()"><img src="https://bilibili1.oss-cn-shenzhen.aliyuncs.com/css/chacha.png"></div>
     </div>
     
-        <script>
-            const weiyitanchuangDOM = document.getElementById('weiyitanchuang');
+    <script>
+        const weiyitanchuangDOM = document.getElementById('weiyitanchuang');
 
-            function showDialog() {
-                console.log('file lxh weiyitanchuangDOM', weiyitanchuangDOM);
-                weiyitanchuangDOM.style.display = 'block';
-            }
+        function showDialog() {
+            console.log('file lxh weiyitanchuangDOM', weiyitanchuangDOM);
+            weiyitanchuangDOM.style.display = 'block';
+        }
 
-            function hideDialog() {
-                weiyitanchuangDOM.style.display = 'none ';
-            }
-        </script>
+        function hideDialog() {
+            weiyitanchuangDOM.style.display = 'none ';
+        }
+    </script>
 </div>
 </body>
 </html>
