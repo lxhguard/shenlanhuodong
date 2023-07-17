@@ -784,15 +784,16 @@
     </script>
 
     <script>
+        const storageKey = "toshare";
         const imgList = [
-            "images/688.png",
-            "images/888.png",
-            "images/520.png",
-            "images/388.png",
-            "images/288.png",
-            "images/188.png",
-            "images/520.png",
-            "images/520.png"
+            "http://xn--dpq50wtc487v.com/images/688.png",
+            "http://xn--dpq50wtc487v.com/images/888.png",
+            "http://xn--dpq50wtc487v.com/images/520.png",
+            "http://xn--dpq50wtc487v.com/images/388.png",
+            "http://xn--dpq50wtc487v.com/images/288.png",
+            "http://xn--dpq50wtc487v.com/images/188.png",
+            "http://xn--dpq50wtc487v.com/images/520.png",
+            "http://xn--dpq50wtc487v.com/images/520.png"
         ]
         // 应用数据
 
@@ -889,7 +890,7 @@
                         $('#prize-con').mLoading('hide');
                         $("img.model_center_img").attr('src', imgList[0]);
                         $("div.model_bg").show();
-                        window.localStorage.setItem("toshare", 1)
+                        window.localStorage.setItem(storageKey, 1)
                         window.localStorage.setItem("prizeImg", imgList[0])
                         clearInterval(T);
                         return;
@@ -966,7 +967,7 @@
         <div style="font-size: .12rem;background-color:#fff;text-align: center;border:2px solid #F3DFBF;padding:.1rem;border-radius: 10px;width:3rem;box-sizing: border-box;">
 
             <p style="display: flex;align-items: center;justify-content: flex-end;" id="fixed_close"></p>
-            <img src="images/1590385501_classify_img.png" style="display: block;margin:10px auto;">
+            <img src="http://xn--dpq50wtc487v.com/images/1590385501_classify_img.png" style="display: block;margin:10px auto;">
 			<!--修改连接-->
             <a id="tips" class="lingqu">恭喜您抽到了兑换码，点击当前蓝色字体领取奖励！</a>
         </div>
@@ -1026,7 +1027,7 @@
         });
     </script>
     <script type="text/javascript">
-        if (window.localStorage.getItem("toshare")) {
+        if (window.localStorage.getItem(storageKey)) {
             $(".model_bg").hide();
             $("#fixed_close").css('display', 'flex');
             $(".fixed").css('display', 'flex');
