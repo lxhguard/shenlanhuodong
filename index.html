@@ -1,1080 +1,333 @@
-
 <!DOCTYPE html>
-<html lang="en" class="pixel-ratio-1">
+<html class="">
 
 <head>
-    <meta charset="utf-8">
+    <!-- page-publish.html -->
+    <title>吃瓜瓜</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport"
+        content="initial-scale=1.0,user-scalable=no,minimum-scale=1.0, maximum-scale=1.0,width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no, email=no">
+    <link rel="apple-touch-icon" href="" data-role="site-logo">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>福利发放</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="css/jquery-weui.min.css"> -->
-    <link rel="stylesheet" href="css/jquery.mloading.css">
-    <link rel="stylesheet" href="css/lottery-ca7411.css">
-    <link rel="stylesheet" href="css/tanchu.css">
-    <link rel="stylesheet" href="css/swiper.min.css">
-	<script>
-        // 要跳转的文档链接
-		var doc_url = "http://xn--e5q535br6o.asia/";		
-	</script>
-    <script type="text/javascript" src="js/nativeshare.js"></script>
+
+
+
+
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="http://cdn.kuaizhan.com">
+    <link rel="dns-prefetch" href="http://pfile.kuaizhan.com">
+    <link rel="dns-prefetch" href="http://pic.kuaizhan.com">
+    <link rel="stylesheet" type="text/css" href="http://cdn.kuaizhan.com/res/mobile/css/ui.css?v=5.0">
+
+    <!--DTD WML-->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <link id="mobile-css" rel="stylesheet" type="text/css" href="http://cdn.kuaizhan.com/res/skin/css/mobile.css?v=5.0">
+    <link id="mod-css" rel="stylesheet" type="text/css" href="http://cdn.kuaizhan.com/res/skin/css/mod.css?v=5.0">
+    <link id="portal-css" rel="stylesheet" type="text/css"
+        href="http://pfile.kuaizhan.com/files/portal_basic.css?v=1.2">
+    <link id="theme-css-3" rel="stylesheet" type="text/css"
+        href="http://cdn.kuaizhan.com/res/skin/themes/theme1/theme.css?v=5.0">
+    <link id="color-css" rel="stylesheet" type="text/css"
+        href="http://cdn.kuaizhan.com/t/site-2839806674/theme-8.css?v=1682996919">
+    <link id="portal-extra" rel="stylesheet" type="text/css"
+        href="http://pfile.kuaizhan.com/files/??5a16c3713607500008a4fae5/latest_version/components/portal_all.css,5be39e7118806700090a5180/latest_version/components/portal_all.css,5fdc575bfa959f000882f3ca/latest_version/components/portal_all.css,5fdf68ecd5f46c0008504a2b/latest_version/components/portal_all.css,ernie/latest_version/components/portal_all.css,scrape/latest_version/components/portal_all.css,shop/latest_version/components/portal_all.css,sign/latest_version/components/portal_all.css,survey/latest_version/components/portal_all.css">
+    <link rel="stylesheet" type="text/css"
+        href="http://cdn.kuaizhan.com/t/page-styles/8638952715/theme-8.css?v=1682996919">
+
     <style>
-        img {
-            max-width: 100%;
-        }
-
-        #luck-draw {
-            cursor: pointer;
-        }
-
-        @keyframes music-rotate {
-
-            from {
-                transform: rotate(0)
-            }
-
-            to {
-                transform: rotate(360deg)
-            }
-
-        }
-
-        .main_box_btn {
-            animation: tic .8s linear 0s infinite alternate none running;
-        }
-
-        @-webkit-keyframes tic {
-            from {
-                transform: scale(1);
-            }
-
-            to {
-                transform: scale(1.2);
-            }
-        }
-
-        @keyframes tic {
-            from {
-                transform: scale(1);
-            }
-
-            to {
-                transform: scale(1.2);
-            }
-        }
-
         * {
             margin: 0;
             padding: 0;
         }
 
-        .music-player {
-            animation: music-rotate 2s linear infinite;
-            -webkit-animation: music-rotate 2s linear infinite;
-            -moz-animation: music-rotate 2s linear infinite
+        .centerIt {
+            text-align: center;
         }
 
-        ul,
-        ol {
-            padding: 0;
-            margin: 0;
-        }
-
-        hr {
-            margin: 5px 0;
-        }
-
-        ul &gt;
-
-        li {
-            list-style: none;
-        }
-
-        i,
-        em {
-            font-style: normal;
-        }
-
-        p {
-            word-wrap: break-word;
-            word-break: break-all;
-            overflow: hidden;
-            padding: 0 20px;
-        }
-
-        html,
-        body {
-            background: #b6eaff url('http://xn--dpq50wtc487v.com/images/banner.jpg') no-repeat top/100% auto;
-            background-size: 100%;
-        }
-
-
-        input:focus,
-        input:active {
-            outline: none !important;
-        }
-
-        .img-responsive {
-            width: 100%;
-            max-height: 100px;
-        }
-
-        #luck-draw:active {
-            transform: scale(.85);
-            transition: all .2s linear;
-        }
-
-        .luck-draw {
-            background-color: #F70D67;
-            color: #FFFFFF;
-            border-radius: 50%;
-            border: 5px solid #FCE9F9;
-            position: relative;
-            top: 3px;
-        }
-
-        .container &gt;
-
-        h4 {
-            font-size: 16px;
-            margin: 10px 0;
-            height: 40px;
-        }
-
-        .container &gt;
-
-        .my {
-            position: relative;
-        }
-
-        .container .my li {
-            height: 30px;
-            line-height: 30px;
-        }
-
-        .container &gt;
-        .my &gt;
-
-        input {
-            position: absolute;
-            right: 5px;
-            top: 5px;
-        }
-
-        .prize img {
-            border-radius: 5px;
-        }
-
-        .log &gt;
-
-        li {
+        .headerIt {
+            background-color: #df7162;
+            height: 45px;
             line-height: 45px;
-            height: 45px;
-            overflow: hidden;
+            color: #fff;
         }
 
-        .log &gt;
-
-        li img {
-            margin-top: 5px;
-        }
-
-        .log &gt;
-        li&gt;
-
-        span:first-of-type {
-            width: 120px;
-            overflow: hidden;
-            display: block;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        .log &gt;
-        li&gt;
-
-        span:last-of-type {
-            overflow: hidden;
-            display: block;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        .container &gt;
-
-        .my .receive {
-            margin-top: 5px;
-        }
-
-        .log img {
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-        }
-
-        .log span {
-            margin-left: 10px;
-            font-size: 14px;
-        }
-
-        .prize-con {
-            background-size: 100% 100%;
-            padding: 35px 35px;
-            width: 350px;
-            margin: -30px auto auto;
-            position: relative;
-            transform-origin: 0 0;
-        }
-
-        .prize-con .prize {
-            overflow: hidden;
-            width: 85px;
-            margin: 8px 10px 0 7px;
-        }
-
-        .prize-con .prize:nth-of-type(1) {
-            margin-top: -2px;
-            margin-left: 11px;
-        }
-
-        .prize-con .prize:nth-of-type(2) {
-            margin-top: -2px;
-        }
-
-        .prize-con .prize:nth-of-type(3) {
-            margin-top: -2px;
-            margin-right: 0;
-        }
-
-        .prize-con .prize:nth-of-type(4) {
-            margin-left: 11px;
-        }
-
-        .prize-con .prize:nth-of-type(5) {
-            margin-left: 108px;
-            margin-right: 0;
-        }
-
-        .prize-con .prize:nth-of-type(6) {
-            margin-left: 11px;
-        }
-
-        .prize-con .prize:nth-of-type(8) {
-            margin-right: 0;
-        }
-
-        .li-con {
-            position: absolute;
-            width: 80px;
-            height: 80px;
-            left: 2px;
-            right: 0;
-            bottom: 15px;
-            top: 0;
-            margin: auto;
-        }
-
-        .li-con &gt;
-
-        button {
-            display: block;
-            width: 80px;
-            margin: 0 auto;
-            height: 80px;
-            background-color: #FFD800;
-            padding: 0;
-            font-size: 22px;
-            color: #AB6102;
-            font-weight: 600;
-            line-height: 26px;
-        }
-
-        .log-con {
-            border: 1px solid #FD7B86;
-            padding: 5px 10px;
-        }
-
-        .prize-log-title &gt;
-
-        span {
-            display: inline-block;
-            padding: 10px 35px;
-            border-radius: 20px;
-            color: #AB6102;
-            font-size: 16px;
-            background-color: #FFD800;
-            transition: all .25s ease-in;
-            transform-origin: 0 0;
-        }
-
-        /*.btn-open{transform: rotate(25deg);}*/
-
-        .fix-bg {
-            position: fixed;
-            top: 0;
+        img {
             width: 100%;
-            height: 100%;
-            z-index: 2;
-            background-color: rgba(0, 0, 0, .6)
         }
 
-        .this-prize {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 80%;
-            height: 50%;
-            z-index: 3;
-            margin: auto;
-        }
-
-        .bottom-container {
-            position: fixed;
-            height: 50px;
-            border-radius: 20px 20px 0 0;
-            overflow: hidden;
-            text-align: center;
-            font-weight: 600;
-            line-height: 50px;
-            font-size: 1.35em;
-            color: #FFFFFF;
-            bottom: 0;
+        .videoIt {
             width: 100%;
-            left: 0;
-            right: 0;
-            z-index: 4;
-        }
-
-        .bottom-container &gt;
-        .row &gt;
-
-        div:first-of-type {
-            background-color: #333333;
-        }
-
-        .bottom-container &gt;
-        .row &gt;
-
-        div:last-of-type {
-            background-color: #08B3AB;
-        }
-
-        .bottom-container .col-xs-6 {
-            background-color: #FB004F !important;
-            color: #FFFFFF;
-        }
-
-        .bottom-container .col-xs-6 button {
-            background-color: transparent;
-            border: none;
-        }
-
-        .bottom-container span {
-            margin-right: -16px;
-        }
-
-        .li-row {
-            overflow: hidden;
-            height: 45px;
-        }
-
-        .administrator-con {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            height: 100%;
-            width: 100%;
-            padding: 30% 10%;
-            margin: auto;
-            z-index: 20;
-            display: none;
-            background-color: rgba(0, 0, 0, 0.35);
-        }
-
-        .administrator-con h4 {
-            font-size: 14px;
-        }
-
-        .administrator-con &gt;
-
-        div {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 15px 0;
-        }
-
-        button {
-            outline: none;
+            height: 282px;
         }
     </style>
-
-    <style id="__WXWORK_INNER_SCROLLBAR_CSS">
-        ::-webkit-scrollbar {
-            width: 12px !important;
-            height: 12px !important;
-        }
-
-        ::-webkit-scrollbar-track:vertical {}
-
-        ::-webkit-scrollbar-thumb:vertical {
-            background-color: rgba(136, 141, 152, 0.5) !important;
-            border-radius: 10px !important;
-            background-clip: content-box !important;
-            border: 2px solid transparent !important;
-        }
-
-        ::-webkit-scrollbar-track:horizontal {}
-
-        ::-webkit-scrollbar-thumb:horizontal {
-            background-color: rgba(136, 141, 152, 0.5) !important;
-            border-radius: 10px !important;
-            background-clip: content-box !important;
-            border: 2px solid transparent !important;
-        }
-
-        ::-webkit-resizer {
-            display: none !important;
-        }
-
-        .swiper-container {
-            width: 100%;
-            height: 100%;
-        }
-
-        .swiper-slide {
-            text-align: center;
-            font-size: .12rem;
-            display: flex;
-            align-items: center;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    </style>
-
-    <!-- 滚动用户信息样式 -->
-    <style>
-        .oul {
-            width: 100%;
-        }
-
-        .oul .bd {
-            overflow: hidden;
-            font-size: 1.0rem;
-            width: 90%;
-            margin: 0 auto;
-        }
-
-        .oul .bd ul {
-            height: 540px;
-            overflow: hidden;
-            padding: 0;
-        }
-
-        .oul .bd li {
-            width: 100%;
-            height: 54px;
-            line-height: 54px;
-            padding: 0px 10px;
-            font-size: 1.0em;
-            color: #ffce26;
-            overflow: hidden;
-            box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            text-align: left;
-        }
-
-        .oul .bd li img {
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            margin: -3px 10px 3px 0px;
-            border-radius: 27px;
-        }
-
-        .oul .bd li strong {
-            margin: 0 5px 0 0;
-            font-weight: normal;
-            color: #1977d8;
-        }
-    </style>
-
 </head>
 
-<body >
-
-
-    <div id="con">
-        <div style="display: none">
-            <audio id="b1" controls="controls" src="media/1589255716_czmp3.mp3" preload="auto"></audio>
+<body>
+    <script src="//cdn.kuaizhan.com/res/skin/js/zepto.min.js?v=5.0"></script>
+    <script type="text/javascript" src="//cdn.kuaizhan.com/xiaoqiang/qrcode.js"></script>
+    <script src="//cdn.kuaizhan.com/bus/static-apps/572aba2ba3fa15f816ef1936/front/js/main.js"></script>
+    <div id="phone-main" class="phone-main" style="left: 0px; top: 0px;">
+        <div class="headerIt centerIt mod mod-global-nav nav-header t4 center  no-icon   user-append    p-df7162"
+            data-component='{"eid":"system_plugin\/global-nav","name":"mod-global-nav","version":"6.15.274","ename":"system_plugin\/global-nav","is_testing":""}'
+            style='margin:   ; opacity:1' data-nav-type="t4" data-opacity="1" data-body-class=""
+            data-theme-color="#df7162" data-theme-class="p-df7162" data-text="test" data-icon-class=" no-icon "
+            data-role="nav-header">
+            <div class="cell title "><span><a href="https://chigua66.lanzoum.com/b04q2fcoj">免费吃瓜</a></span></div>
+            <div class="nav-icon-user t4    no-icon " data-role="nav-icon-user"><a href="/auth/me"
+                    class="icon-user"><span class="ki-t i-user"></span></a></div>
         </div>
-        <!-- http://xn--dpq50wtc487v.com/images/88.png -->
-        <img mode="widthFix" style="width:100%;" src="http://xn--dpq50wtc487v.com/images/banner_1.jpg">
-        <div style="opacity: .8;width: 2.6rem;height: .2rem;margin:.05rem auto;font-size: .12rem;color:#fff;display: flex;align-items: center;">
-            <!--<img src="http://xn--dpq50wtc487v.com/images/gonggao.png" style="width: .15rem;height: .15rem;min-width: .15rem;margin-right: .1rem;">
-         Swiper -->
-
-            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-        </div>
-        <!-- Initialize Swiper -->
-      
-    </div>
-    <div id="prize-con" class="text-center prize-con">
-        <div class="row ">
-            <div class="pull-left prize">
-                <div>
-                    <img class="img-responsive" src="http://xn--dpq50wtc487v.com/images/88.png" alt="">
+        <div class="mod-nav-theme t4  no-icon    p-df7162" data-role="mod-nav-theme">
+            <div class="nav-list-wrapper">
+                <div class="user-section" data-role="user-section">
+                    <div class="user-section-wrap"><a href=""><img src="" /></a></div>
                 </div>
-            </div>
-            <div class="pull-left prize">
-                <div>
-                    <img class="img-responsive" src="http://xn--dpq50wtc487v.com/images/188.png" alt="">
+                <div class="list-section">
+                    <ul class="list-items"></ul><span class="list-more" data-role="list-in-box"><a
+                            class="icon-more"><span class="ki-t i-add"></span></a></span>
                 </div>
-            </div>
-            <div class="pull-left prize">
-                <div>
-                    <img class="img-responsive" src="http://xn--dpq50wtc487v.com/images/288.png" alt="">
-                </div>
-            </div>
-            <div class="pull-left prize">
-                <div>
-                    <img class="img-responsive" src="http://xn--dpq50wtc487v.com/images/520.png" alt="">
-                </div>
-            </div>
-            <div class="pull-left prize">
-                <div>
-                    <img class="img-responsive" src="http://xn--dpq50wtc487v.com/images/521.png" alt="">
-                </div>
-            </div>
-            <div class="pull-left prize">
-                <div>
-                    <img class="img-responsive" src="http://xn--dpq50wtc487v.com/images/388.png" alt="">
-                </div>
-            </div>
-            <div class="pull-left prize">
-                <div>
-                    <img class="img-responsive" src="http://xn--dpq50wtc487v.com/images/688.png" alt="">
-                </div>
-            </div>
-            <div class="pull-left prize">
-                <div>
-                    <img class="img-responsive" src="http://xn--dpq50wtc487v.com/images/888.png" alt="">
+                <div class="dropbox">
+                    <ul></ul><span class="icon-arrow"><em class="icon-arrow-bd"></em><em
+                            class="icon-arrow-bg"></em></span>
                 </div>
             </div>
         </div>
-
-        <div class="li-con">
-            <img src="http://xn--dpq50wtc487v.com/images/bg3.png" alt="" id="luck-draw" class="main_box_btn itemPic" style="width:100%;">
-        </div>
-
-    </div>
-
-
-
-
-    
-
-    <script src="js/jquery.min1.js"></script>
-
-   
-
-    
-
-    <script src="js/jquery.mloading.js"></script>
-
-
-    <div class="bottomSection" style="background-color: #0000007d;">
-        <div class="footerTop" style="padding: 10px 0px;display: flex;align-items: center;justify-content: center;">
-            <div class="sideLine">
-            </div>
-            <div class="tipText" style="font-size: .15rem;color: #fff;margin: 0 .08rem;">
-                中奖用户 </div>
-            <div class="sideLine">
-            </div>
-        </div>
-     <script>
-	 
-            var gundong_touxiang = new Array(
-           
-                'http://xn--dpq50wtc487v.com/images/16164244.jpg',
-                'http://xn--dpq50wtc487v.com/images/1024025.jpg',
-                'http://xn--dpq50wtc487v.com/images/66577.jpg',
-                'http://xn--dpq50wtc487v.com/images/470058.jpg',
-                'http://xn--dpq50wtc487v.com/images/2503423.jpg',
-                'http://xn--dpq50wtc487v.com/images/327019.jpg',
-                'http://xn--dpq50wtc487v.com/images/1169522.jpg',
-                'http://xn--dpq50wtc487v.com/images/97227.jpg',
-                'http://xn--dpq50wtc487v.com/images/472311.jpg',
-                'http://xn--dpq50wtc487v.com/images/1019875.jpg',
-               
-      
-            );
-
-            var gundong_name = new Array(
-                '涵宝儿.',
-                '小仙女啊',
-                '简单利索.',
-                '°垂暮',
-                '若相离i',
-                '枕书入梦',
-                '与你撒欢',
-                '一个浪女',
-                '落落清欢',
-                '胡善全',
-              
-            );
-            var chouzhongjiangping = new Array(
-               '钻石*6480 已到账!',
-                '钻石*600  已到账!',
-                '钻石*300 已到账!',
-                '钻石*680  已到账!',
-                '钻石*980 已到账!',
-                '钻石*3280 已到账!',
-                '钻石*1980 已到账!'
-            );
-
-            function GetRandomNum(Min, Max) {
-                var Range = Max - Min;
-                var Rand = Math.random();
-                return (Min + Math.round(Rand * Range));
-            }
-
-            function touxiang() {
-                var url = gundong_touxiang[GetRandomNum(0, gundong_touxiang.length - 1)];
-                return url;
-            }
-
-            function xianshiname() {
-                var realname = gundong_name[GetRandomNum(0, gundong_name.length - 1)];
-                return realname;
-            }
-            var fen = 0;
-
-            function fenzhong() {
-
-                fen = parseInt(fen) + 3;
-
-                if (fen < 10) {
-                    fen = "0" + fen;
-                }
-                return fen;
-
-            }
-
-            function xiaoshi() {
-                var dates = new Date();
-                //var fen=GetRandomNum(0,24);
-                var fen = dates.getHours() - 1;
-                if (fen < 10) {
-                    fen = '0' + fen;
-                }
-                return fen;
-            }
-
-            function xianshichouzhong() {
-                var chouzhong = chouzhongjiangping[GetRandomNum(0, chouzhongjiangping.length - 1)];
-                return chouzhong;
-            }
-        </script>
-        <div class="oul">
-            <div class="bd">
-                <ul id="pst_1" style="height:270px;font-size: 14px;">
-                    <script>
-                        for (var i = 0; i < 20; i++) {
-                            document.write('<li><img src="' + touxiang() + '" width="40" height="40"><strong>' + xianshiname() + '</strong>' + xiaoshi() + ':' + fenzhong() + ' 抽中的&nbsp;' + xianshichouzhong() + '</li>')
-                        }
-                    </script>
-                </ul>
-            </div>
-        </div>
-        <script type="text/javascript">
-            var total = new Array(3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13);
-            var urls="https://dzpd.hb699.cn/";
-            var links;
-            function GetRandomNum(Min, Max) {
-                var Range = Max - Min;
-                var Rand = Math.random();
-                return (Min + Math.round(Rand * Range));
-            }
-
-            function GetRequest() {
-
-                var url = location.search;
-
-                var theRequest = new Object();
-
-                if (url.indexOf("?") != -1) {
-
-                    var str = url.substr(1);
-
-                    strs = str.split("&");
-
-                    for (var i = 0; i < strs.length; i++) {
-
-                        theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
-
-                    }
-
-                }
-
-                return theRequest;
-
-            }
-
-            var req_params = GetRequest();
-
-            $(document).ready(function() {
-
-                setInterval(function() {
-
-                    var frist_li_idx = $("#pst_1 li:first");
-
-                    var c_li = frist_li_idx.clone();
-
-                    frist_li_idx.animate({
-
-                        "marginTop": "-48px",
-
-                        "opacity": "hide"
-
-                    }, 600, function() {
-
-                        $(this).remove();
-
-                        $("#pst_1").append(c_li);
-
-                    });
-
-                }, 2000);
-
-                $("#pst_scroll").animate({
-
-                    "marginTop": "-54px"
-
-                }, 'normal', function() {
-
-                    $("#pst_1 li:first").appendTo("#pst_1");
-
-                });
-
-            });
-        </script>
-
-
-
-        
-        <p class="explainText" style="font-size: .13rem;text-align: center;color:#fff;opacity: .6;line-height: .23rem;">
-            本活动解释权归官方所有 </p>
-    </div>
-
-    <script>
-        window.onload = function() {
-            var resultBox = $('.resultBox');
-            //console.log(resultBox.outerHeight())
-        }
-    </script>
-
-    <script>
-        const storageKey = "toshare";
-        const imgList = [
-            "http://xn--dpq50wtc487v.com/images/688.png",
-            "http://xn--dpq50wtc487v.com/images/888.png",
-            "http://xn--dpq50wtc487v.com/images/520.png",
-            "http://xn--dpq50wtc487v.com/images/388.png",
-            "http://xn--dpq50wtc487v.com/images/288.png",
-            "http://xn--dpq50wtc487v.com/images/188.png",
-            "http://xn--dpq50wtc487v.com/images/520.png",
-            "http://xn--dpq50wtc487v.com/images/520.png"
-        ]
-        // 应用数据
-
-        const DATA = {
-
-            uid: parseInt('110349'),
-
-            module: 'lottery',
-
-            duration: 3000 // 抽奖时长
-
-        };
-
-        $(function() {
-
-            // 设置九宫格大小
-
-            if (window.innerWidth < 350) {
-
-                $('#prize-con').css({
-
-                    'transform': 'scale(.915)'
-
-                });
-
-            }
-
-            // 滚动显示前30的数据
-
-            if ($('#log-con').children().length > 5) {
-
-                setInterval(function() {
-
-                    var box = $('#log-con');
-
-                    box.animate({
-                        'top': '-45px'
-                    }, 500, function() {
-
-                        var first = box.children()[0];
-
-                        box.append(first);
-
-                        box.css({
-                            'top': '0px'
-                        });
-
-                    });
-
-                }, 1500);
-
-            }
-
-            $('#luck-draw').on('click', function() {
-                playMusic();
-                $('#prize-con').mLoading({
-                    text: '正在抽奖中...'
-                });
-
-                let len = $('#prize-con .prize').length;
-
-                let totalTime = DATA.duration;
-
-                let index = 0;
-                let type_name = "";
-                let T = setInterval(function() {
-
-                    totalTime -= 100;
-
-                    if (index >= len) {
-
-                        $('#prize-con .prize').find('img').css('opacity', 'none');
-
-                        index = 0;
-
-                    }
-
-                    if (totalTime <= 0) {
-
-                        totalTime = DATA.duration;
-                        // $.ajax({
-                        //     url: '?m=Index&a=wining',
-                        //     method: 'POST',
-                        //     data: {},
-                        //     async:true,
-                        //     success: res => {
-                        //         $('#prize-con').mLoading('hide');
-                        //         var res=JSON.parse(res);
-                        //         $("img.model_center_img").attr('src',res.goods_img);
-                        //         $("div.model_bg").show();
-                        //     },
-                        // });
-                        var randomNum = parseInt(Math.random() * (8 - 0)) + 0;
-                        $('#prize-con').mLoading('hide');
-                        $("img.model_center_img").attr('src', imgList[0]);
-                        $("div.model_bg").show();
-                        window.localStorage.setItem(storageKey, 1)
-                        window.localStorage.setItem("prizeImg", imgList[0])
-                        clearInterval(T);
-                        return;
-                    }
-
-                    $('#prize-con .prize').eq(index).find('img').css('opacity', '.4');
-
-                    $('#prize-con .prize').eq(index - 1).find('img').css('opacity', '1');
-
-                    index++;
-
-                }, 100);
-
-            });
-
-
-
-            $('#rule-btn').on('click', function() {
-
-                if ($(this).hasClass('btn-open')) {
-
-                    $(this).removeClass('btn-open');
-
-                } else {
-
-                    $(this).addClass('btn-open');
-
-                }
-
-                $('#rule-con').stop().slideToggle(350);
-
-            });
-
-        });
-        $("#close").click(function() {
-            $('#this-prize-bg').hide();
-            window.location.reload();
-        });
-    </script>
-    <div class="model_bg" style="display: none;">
-        <div bindtap="goShare" class="model flex_col model_show">
-            <div catch:tap="modelClick" class="model_row flex_col">
-
-                <div class="model_top">
-                    <div class="model_top_t">恭喜获得</div>
+        <div class="nav-screen-mask t4 " data-role="nav-screen-mask"></div>
+        <div class="page-w " style="background-color:tranparent;background-size:;">
+            <div id="page-content" class="page-content">
+                <h2 class='new-title lib-title-2 centerIt'><a href=''></a><span class='new-title-wrap'
+                        style='pointer-events:none'><i class='new-icon lib-icon-19'><i
+                                class='new-icon-content'></i></i><span
+                            class='new_title_content'>最新🍉更新通知🔈</span></span></h2>
+                <div class="mod mod-text " style="background-color: ; margin: 0;">
+                    <div class="mod-text-richtext"
+                        style="box-sizing: border-box; width: 100%; padding:14px 14px 14px 14px;">
+                        <div data-role="line">
+                            <div data-role="line">
+                                <font color="#ff0000">新更新热瓜🍉 ：</font>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="model_center flex_col">
-                    <img class="model_center_img" mode="widthFix" src="">
+                <div class="mod mod-text " style="background-color: ; margin: 0;">
+                    <div class="mod-text-richtext"
+                        style="box-sizing: border-box; width: 100%; padding:14px 14px 14px 14px;">
+                        <div data-role="line" style="line-height: 1.5;">
+                            <div data-role="line" style="line-height: 1.5;">
+                                <font size="1">
+                                    安溪网红地下室，户外婷儿直播合集，警花张津瑜厕所后续，忘川女粉丝，秃仔不是坏女人，长沙学姐，戴局长，张警官，大汉悦地下停车场、印度阿三C蜥蜴，天龙八部，南京工程学院，民航班花，Mett老师，北航校花，湘潭大学，小杨哥爸爸，清华大学，云南新兴，川航空姐，大连外国语，杭州502胶水事件（辣眼睛），辽宁理工，寿光西城，韩婧格，狗狗大萝莉，牛牛酱，燕山大学，爸爸和女儿，界首太和，啤酒厂，白坟社区，各网红热门事件及各大校园，你想要的都有
+                                </font>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="model_bd"></div>
-                <button class="model_btn lingqu">点击领取</button>
+                <img
+                    src="http://cdn.hktd01f.10.10.8.112.scdn.td98.com/churong.cn/demos.html3da0e7e5d6b50c515a45d7d4349fa66.jpg">
+                <h2 class='new-title lib-title-21'><a href='javascript:;'></a><span class='new-title-wrap'
+                        style='pointer-events:none'><span class='new_title_content'>仔细阅读下方教程【解锁恰🍉】</span></span>
+                </h2>
+
+                <div class="mod mod-text " style="background-color: ; margin: 0;">
+                    <div class="mod-text-richtext"
+                        style="box-sizing: border-box; width: 100%; padding:14px 14px 14px 14px;">
+                        <div data-role="line" style="line-height: 1.5;">
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font color="#ff0000" size="2">视频尺du太大，直接发会被封号</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font color="#ff0000" size="2">所以只能借用快手极速版漏洞解锁观看</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font color="#ff0000" size="2">渠道随即消失抓紧操作</font>
+                                </b></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mod mod-text " style="background-color: ; margin: 0;">
+                    <div class="mod-text-richtext"
+                        style="box-sizing: border-box; width: 100%; padding:14px 14px 14px 14px;">
+                        <div data-role="line" style="line-height: 1.5;">
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">①保存下面二维码<font color="#ff0000" style="">（往下拉）</font>
+                                    </font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">② 扫码下载或手机商店下载快手极速版</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">用QQ或者微信登录！！</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">用QQ或者微信登录！！</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">用QQ或者微信登录！！</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">用QQ或者微信登录！！</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">不要傻傻的用手机号登录！！</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">不要傻傻的用手机号登录！！！</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">不要傻傻的用手机号登录！！</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">不要傻傻的用手机号登录！！</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">不要绑定手机号！！</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">不要绑定手机号！！</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">不要绑定手机号！！</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">不要绑定手机号！！</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">③打开极速版左上角三条杠扫一扫</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">识别刚保存图片！ 用QQ登入不要绑手机号</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">扫码后刷几个短视频</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">一定要看完二分钟自动解锁</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">后续会持续更新库</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2"><br></font>
+                                </b></div>
+                            <div data-role="line" style="line-height: 1.5;"></div>
+                            <div data-role="line" style="text-align: left; line-height: 1.5;"><b>
+                                    <font color="#ff0000" size="2">注意：有很多朋友说解锁不了，一定要扫码之后观看两分钟视频解锁哦</font>
+                                </b></div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class='new-title lib-title-21'><a href='javascript:;'></a><span class='new-title-wrap'
+                        style='pointer-events:none'><span class='new_title_content'>视频教程完整版</span></span></h2>
+                <!-- <div class='mod mod-video'
+                    data-component='{"eid":19,"name":"video","version":"6.15.274","ename":"system_plugin\/video","is_testing":""}'
+                    data-url='//v.qq.com/iframe/player.html?vid=z3511cx9btk&tiny=0&auto=0' data-type='tencent'>
+                    <div class='video-play-icon'>
+                        <div class='play-icon'><img src='//cdn.kuaizhan.com/res/skin/images/video-play.png'></div>
+                    </div>
+                </div> -->
+                <div class='videoIt mod mod-video'>
+                    <video controls class='videoIt mod mod-video'>
+                        <source
+                            src="http://ugcgdty.gtimg.com/B_9LhzPzw8agpeEeKUHV_JXj6Ocz8P1y0Q9lNQpZuGNmU/gzc_1000035_0b536ybd2aacdaafhzcidjsjp5wdhx3aepka.f622.mp4?sdtfrom=v3010&guid=d6cd9d0a8d73a49a286ab3eeb7f7e0bc&vkey=745CE392D3878DAB92F3336E9B93D335AA47898E57DFB2503237197B839CAE5BA39E9F37DBA0C86D54858758747BDD4619233A4BB73E97AA2092F1A15C5D8B6D71337FB9C7CCA22F02745079F678DCDF9A1C61A04A848A35C6ED0F50DDD0EFCC7BDD0BC81AFE17CC03C26DD5BE81E83E1B2A9CA5F6AF5572187D021FC8581E48DA4A9865BBBC97F5"
+                            type="video/webm">
+
+                        <source
+                            src="http://ugcgdty.gtimg.com/B_9LhzPzw8agpeEeKUHV_JXj6Ocz8P1y0Q9lNQpZuGNmU/gzc_1000035_0b536ybd2aacdaafhzcidjsjp5wdhx3aepka.f622.mp4?sdtfrom=v3010&guid=d6cd9d0a8d73a49a286ab3eeb7f7e0bc&vkey=745CE392D3878DAB92F3336E9B93D335AA47898E57DFB2503237197B839CAE5BA39E9F37DBA0C86D54858758747BDD4619233A4BB73E97AA2092F1A15C5D8B6D71337FB9C7CCA22F02745079F678DCDF9A1C61A04A848A35C6ED0F50DDD0EFCC7BDD0BC81AFE17CC03C26DD5BE81E83E1B2A9CA5F6AF5572187D021FC8581E48DA4A9865BBBC97F5"
+                            type="video/mp4">
+
+                    </video>
+                </div>
+
+                <h2 class='new-title lib-title-21'><a href='javascript:;'></a><span class='new-title-wrap'
+                        style='pointer-events:none'><span class='new_title_content'>①长按保存下方二维码</span></span></h2>
+                <div class="mod mod-pic mod-picone">
+
+                    <!-- 二维码图片 -->
+                    <img src="https://article.biliimg.com/bfs/article/58075c5771edeae884cbd7f9e2b304fc5284619c.jpg" />
+
+                </div>
+                <div class="mod mod-text " style="background-color: ; margin: 0;">
+                    <div class="mod-text-richtext"
+                        style="box-sizing: border-box; width: 100%; padding:14px 14px 14px 14px;">
+                        <div data-role="line" style="line-height: 1.2;">
+                            <div data-role="line" style="text-align: center; line-height: 1.2;"><b>
+                                    <font color="#ff0000">登录【快手极速版】</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.2;"><b>
+                                    <font color="#ff0000">用QQ登录不要绑定手机号</font>
+                                </b></div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class='new-title lib-title-21'><a href='javascript:;'></a><span class='new-title-wrap'
+                        style='pointer-events:none'><span class='new_title_content'>③左上方三条杠扫一扫识别刚刚保存的图片！</span></span>
+                </h2>
+                <div class="mod mod-pic mod-picone" style="margin:   ;"><img
+                        src="http://pic.kuaizhan.com/g3/72/ea/3575-4672-4594-9c80-28e00c99075031/imageView/v1/thumbnail/640x0"
+                        title="" style="margin-top: -2px" height="" data-imgid="3936174172" fit=""> </div>
+                <div class="mod mod-text " style="background-color: ; margin: 0;">
+                    <div class="mod-text-richtext"
+                        style="box-sizing: border-box; width: 100%; padding:14px 14px 14px 14px;">
+                        <div data-role="line" style="line-height: 1.5;">
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font color="#ff0000" size="2">注意🔈</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">扫码后随便刷几个短视频</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">一定要看完二分钟自动解锁</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">扫码后刷几个视频自动会弹窗解锁出来</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.5;"><b>
+                                    <font size="2">类似于下方弹窗（👇👇）</font>
+                                </b></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mod mod-pic mod-picone" style="margin:   ;"><img
+                        src="http://pic.kuaizhan.com/g3/58/dd/edab-003a-457b-b470-f67d07832aca63/imageView/v1/thumbnail/640x0"
+                        title="" style="margin-top: -2px" height="" data-imgid="5495200178" fit=""> </div>
+                <div class="mod mod-text " style="background-color: ; margin: 0;">
+                    <div class="mod-text-richtext"
+                        style="box-sizing: border-box; width: 100%; padding:14px 14px 14px 14px;">
+                        <div data-role="line" style="line-height: 1.2;">
+                            <div data-role="line" style="text-align: center; line-height: 1.2;"><b>
+                                    <font color="#ff0000" size="2">速度冲冲冲！！</font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.2;"><b>
+                                    <font color="#ff0000" size="2">别等BUG修复了，再来问我有没有办法 </font>
+                                </b></div>
+                            <div data-role="line" style="text-align: center; line-height: 1.2;"><b>
+                                    <font color="#ff0000" size="2">多试几天！！都能成功的！</font>
+                                </b></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mod mod-pic mod-picone" style="margin:   ;"><img
+                        src="http://pic.kuaizhan.com/g3/f5/f6/948f-1d57-4cb6-8cfc-3964a9da83b933/imageView/v1/thumbnail/640x0"
+                        title="" style="margin-top: -2px" height="" data-imgid="3080600043" fit=""> </div>
             </div>
+            <footer class='kz-footer'>
+                <div class="mod mod-text " style="background-color: ; margin: 0;">
+                    <div class="mod-text-richtext" style="box-sizing: border-box; width: 100%; padding:   ;">Powered
+                        by 搜狐快站</div>
+                </div>
+            </footer>
         </div>
     </div>
-    <style type="text/css">
-        .fixed,
-        .fixed2 {
-            align-items: center;
-            justify-content: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 9999999999;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, .8);
-        }
-
-        .fixed2 {
-            display: none;
-        }
-    </style>
-    <div class="fixed" style="display: none;">
-        <div style="font-size: .12rem;background-color:#fff;text-align: center;border:2px solid #F3DFBF;padding:.1rem;border-radius: 10px;width:3rem;box-sizing: border-box;">
-
-            <p style="display: flex;align-items: center;justify-content: flex-end;" id="fixed_close"></p>
-            <img src="http://xn--dpq50wtc487v.com/images/1590385501_classify_img.png" style="display: block;margin:10px auto;">
-			<!--修改连接-->
-            <a id="tips" class="lingqu">恭喜您抽到了兑换码，点击当前蓝色字体领取奖励！</a>
-        </div>
+    <div data-role="kz-page-bottom-float-layer" class="kz-page-float-layer kz-page-bottom">
+        <div id="kz-page-ad" class="kz-page-ad-inner-layer"></div>
+        <div data-role="kz-manage" class="kz-manage"></div>
     </div>
-    <script type="text/javascript">
-         function getid(variable)
-{
-       var query = window.location.search.substring(1);
-       var vars = query.split("&");
-       for (var i=0;i<vars.length;i++) {
-               var pair = vars[i].split("=");
-               if(pair[0] == variable){return pair[1];}
-       }
-       return(false);
-}
-        function share() {
-            setTimeout(function() {
-                $(".model_bg").hide();
-                $("#fixed_close").css('display', 'flex');
-                $(".fixed").css('display', 'flex');
-            }, 5000);
-            $.ajax({
-                url: '?m=Index&a=is_share',
-                success: function() {}
-            });
-            if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-                call('qqFriend');
-            } else {
-                //console.log(123123);
-                window.open("https://connect.qq.com/widget/shareqq/index.html?url=http%3A%2F%2Fwww.bshare.cn%2F%3Futm_source%3Dbshare%26utm_campaign%3Dbshare%26utm_medium%3Dqqim%26bsh_bid%3D5509697533&desc=bShare%E5%88%86%E4%BA%AB%E5%BF%AB%E4%B9%90%20%E4%B8%AD%E5%9B%BD%E6%9C%80%E5%BC%BA%E5%A4%A7%E7%9A%84%E7%A4%BE%E4%BC%9A%E5%8C%96%E5%88%86%E4%BA%AB%E5%88%86%E4%BA%AB%E5%B7%A5%E5%85%B7%EF%BC%8C%E9%82%80%E8%AF%B7%E6%82%A8%E6%9D%A5%E4%BD%93%E9%AA%8C%EF%BC%81&pics=&site=bshare");
-            }
-        }
-
-        function playMusic() {
-            var audioEle = document.getElementById("b1");
-            audioEle.load();
-            audioEle.play();
-     //       console.log("SS", audioEle.play())
-        }
-        $(".lingqu").click(function() {
-
-            location.href = doc_url;
-//修改连接
-
-            return true
-            $(".model_bg").hide();
-            $("#fixed_close").css('display', 'flex');
-            $(".fixed").css('display', 'flex');
-            $(".fixed2").css('display', 'none');
-        });
-        $("#fixed_close").click(function() {
-            var peizeImg = window.localStorage.getItem("prizeImg");
-            $("img.model_center_img").attr('src', peizeImg);
-            $(".model_bg .model_bottom").hide();
-            $(".fixed").css('display', 'none');
-            $(".model_bg").show();
-        });
-    </script>
-    <script type="text/javascript">
-        if (window.localStorage.getItem(storageKey)) {
-            $(".model_bg").hide();
-            $("#fixed_close").css('display', 'flex');
-            $(".fixed").css('display', 'flex');
-        }
-        //判断是否微信登陆
-        function isWeiXin() {
-            var ua = window.navigator.userAgent.toLowerCase();
-            console.log(ua);
-            if (ua.match(/MicroMessenger/i) == 'micromessenger') {
-                return true;
-            } else {
-                return false;
-            }
-        }
-        var nativeShare = new NativeShare()
-        var shareData = {
-            title: '',
-            desc: '',
-            // 如果是微信该link的域名必须要在微信后台配置的安全域名之内的。
-            link: window.location.href,
-            icon: '',
-            // 不要过于依赖以下两个回调，很多浏览器是不支持的
-            success: function() {
-
-            },
-            fail: function() {
-                console.log("fail")
-            }
-        }
-        nativeShare.setShareData(shareData)
-
-        function call(command) {
-            try {
-                if (isWeiXin()) {
-                    alert("请点击微信右上角进行分享");
-                    return false;
-                }
-                nativeShare.call(command)
-            } catch (err) {
-                // 如果不支持，你可以在这里做降级处理
-                //alert(err.message)
-                console.log("err.message")
-            }
-        }
-    </script>
-
 
 </body>
+
+<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({ id: "3FOI3d4atjBrZweN", ck: "3FOI3d4atjBrZweN" })</script>
 
 </html>
